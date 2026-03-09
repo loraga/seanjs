@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Download Sean Journey</title>
-
 <link rel="stylesheet" href="css/css-IxWB4lY7jQps.css">
 <link rel="stylesheet" href="css/css-XIwxACQ8x75P.css">
 <link rel="stylesheet" href="css/css-FMlQLo7aZIdX.css">
@@ -15,81 +12,372 @@
 <link rel="stylesheet" href="css/css-H0JssrYI01Vh.css">
 <link rel="stylesheet" href="css/css-qtkO4EIQkeHP.css">
 <link rel="stylesheet" href="css/css-QfzSubAjtfDZ.css">
+<style>
+  body {
+    position: relative;
+    overflow-x: hidden;
+    background: #070b18;
+  }
 
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(7,11,24,0.55) 0%, rgba(7,11,24,0.78) 45%, rgba(7,11,24,0.92) 100%),
+      url('images/images-v4P0TdIMLBCH.jpg') center center / cover no-repeat;
+    z-index: -3;
+    transform: scale(1.03);
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at top, rgba(124, 92, 255, 0.22), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(62, 180, 255, 0.14), transparent 30%);
+    z-index: -2;
+    pointer-events: none;
+  }
+
+  .page-wrapper {
+    position: relative;
+    backdrop-filter: saturate(110%);
+  }
+
+  .header,
+  .header__bottom {
+    background: rgba(8, 12, 24, 0.35);
+    backdrop-filter: blur(8px);
+  }
+
+  .download-hero {
+    position: relative;
+    padding: 110px 0 70px;
+  }
+
+  .download-hero .clip-path-img {
+    opacity: 0.28;
+    filter: blur(1px);
+  }
+
+  .download-panel {
+    position: relative;
+    background: linear-gradient(180deg, rgba(17,24,42,0.82) 0%, rgba(10,16,30,0.9) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    padding: 38px 30px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    overflow: hidden;
+  }
+
+  .download-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.06), transparent 45%, rgba(80,140,255,0.06));
+    pointer-events: none;
+  }
+
+  .download-subtitle {
+    max-width: 720px;
+    margin: 18px auto 0;
+    color: rgba(255,255,255,0.78);
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  .detail-grid {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .detail-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 22px 18px;
+    text-align: left;
+    transition: transform .25s ease, border-color .25s ease, background .25s ease;
+  }
+
+  .detail-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.06);
+  }
+
+  .detail-card .label {
+    display: block;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    color: rgba(255,255,255,0.48);
+    margin-bottom: 8px;
+  }
+
+  .detail-card strong,
+  .detail-card span,
+  .detail-card p {
+    color: #fff;
+    margin: 0;
+  }
+
+  .hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+
+  .hero-actions .cmn-btn,
+  .hero-actions .alt-btn {
+    min-width: 210px;
+  }
+
+  .alt-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 26px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.16);
+    color: #fff;
+    background: rgba(255,255,255,0.05);
+    transition: all .25s ease;
+  }
+
+  .alt-btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.26);
+  }
+
+  .download-note {
+    margin-top: 20px;
+    color: rgba(255,255,255,0.58);
+    font-size: 14px;
+  }
+
+  .content-block {
+    padding: 0 0 120px;
+  }
+
+  .glass-box {
+    background: rgba(10,16,30,0.82);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 26px;
+    padding: 32px 28px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    height: 100%;
+  }
+
+  .glass-box h3,
+  .glass-box h4,
+  .glass-box p,
+  .glass-box li,
+  .glass-box span,
+  .glass-box strong {
+    color: #fff;
+  }
+
+  .glass-box p,
+  .glass-box li {
+    color: rgba(255,255,255,0.78);
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+    margin: 22px 0 0;
+  }
+
+  .check-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+  }
+
+  .check-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #8db8ff;
+  }
+
+  .mini-cta {
+    margin-top: 22px;
+    display: inline-block;
+  }
+
+  .info-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 24px;
+  }
+
+  .info-pill {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 18px;
+  }
+
+  .footer-section {
+    background-color: transparent !important;
+  }
+
+  @media (max-width: 991px) {
+    .detail-grid,
+    .info-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .download-hero {
+      padding-top: 90px;
+    }
+  }
+</style>
 </head>
-
 <body>
+<div class="preloader">
+  <div class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+  </div>
+</div>
+
+<div class="scroll-to-top">
+  <span class="scroll-icon"><i class="las la-arrow-up"></i></span>
+</div>
 
 <div class="page-wrapper">
+  <header class="header">
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="navbar navbar-expand-xl align-items-center">
+          <a class="site-logo site-title" href="index.html">
+            <img src="images/images-RcSnmPoXoDvJ.png" alt="Sean Journey logo">
+          </a>
+          <div class="nav-right">
+            <a href="index.html">Home</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<header class="header">
-<div class="header__bottom">
-<div class="container">
+  <section class="inner-hero style--three download-hero">
+    <div class="clip-path-img"><img src="images/images-9YUft3VPy93D.png" alt="Sean Journey artwork"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-10">
+          <div class="download-panel text-center">
+            <h1 class="game-name">Download Sean Journey Beta</h1>
+            <p class="download-subtitle">
+              The official download page, redesigned to match the main site with stronger background transitions and a richer overall presentation.
+            </p>
 
-<nav class="navbar navbar-expand-xl align-items-center">
+            <div class="detail-grid">
+              <div class="detail-card">
+                <span class="label">Version</span>
+                <strong>Latest Beta Build</strong>
+              </div>
+              <div class="detail-card">
+                <span class="label">Platform</span>
+                <strong>Windows 10 / 11</strong>
+              </div>
+              <div class="detail-card">
+                <span class="label">Format</span>
+                <strong>ZIP Package</strong>
+              </div>
+            </div>
 
-<a class="site-logo site-title" href="index.html">
-<img src="images/images-RcSnmPoXoDvJ.png">
-</a>
+            <div class="hero-actions">
+              <a href="downloads/Sean Journey.zip" class="cmn-btn style--two" download>Download Beta</a>
+              <a href="#details" class="alt-btn">View Details</a>
+            </div>
 
-<div class="nav-right">
-<a href="index.html">Home</a>
+            <p class="download-note">Clean page layout • soft background blend • site-matching visual style</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-block" id="details">
+    <div class="container">
+      <div class="row mb-none-30">
+        <div class="col-lg-6 mb-30">
+          <div class="glass-box">
+            <div class="section-header has--bg mb-4">
+              <div class="header-image justify-content-start"><img src="images/images-zzeDLjDer0Ff.png" alt="Game info"></div>
+              <h2 class="section-title">Download Details</h2>
+            </div>
+            <p>
+              This page was redesigned to make the beta download clearer, easier to use, and visually consistent with the main site.
+            </p>
+            <ul class="check-list">
+              <li>Prepared as a direct ZIP download</li>
+              <li>Full-screen background added to match the main site</li>
+              <li>Soft dark overlay and gradient transitions applied</li>
+              <li>A second CTA was added for quick access further down the page</li>
+            </ul>
+            <a href="downloads/Sean Journey.zip" class="cmn-btn style--two mini-cta" download>Start Download</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-30">
+          <div class="glass-box">
+            <div class="section-header has--bg mb-4">
+              <div class="header-image justify-content-start"><img src="images/images-P5N8uVR3KMIM.png" alt="Header art"></div>
+              <h2 class="section-title">Before You Install</h2>
+            </div>
+            <p>
+              After downloading, extract the ZIP file and keep the game files together in a single folder for the best experience.
+            </p>
+            <div class="info-strip">
+              <div class="info-pill">
+                <span class="label">OS</span>
+                <strong>Windows</strong>
+              </div>
+              <div class="info-pill">
+                <span class="label">Build Type</span>
+                <strong>Beta</strong>
+              </div>
+              <div class="info-pill">
+                <span class="label">Language</span>
+                <strong>English</strong>
+              </div>
+            </div>
+            <ul class="check-list">
+              <li>Extract the ZIP file after the download finishes</li>
+              <li>Run the game from the extracted folder</li>
+              <li>Use this page to get the latest version</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-section bg_img" data-background="images/elements/footer.png">
+    <div class="container">
+      <div class="row footer-bottom align-items-center">
+        <div class="col-lg-7 col-md-6 text-md-left text-center">
+          <p class="copy-right-text">Copyright &copy; 2026. All Rights Reserved By <a href="index.html">Sean Journey</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
-
-</nav>
-
-</div>
-</div>
-</header>
-
-
-<section class="inner-hero style--three">
-
-<div class="clip-path-img">
-<img src="images/images-9YUft3VPy93D.png">
-</div>
-
-<div class="container">
-
-<div class="row justify-content-center">
-
-<div class="col-lg-8 text-center">
-
-<h1 class="game-name">Download Sean Journey</h1>
-
-<p class="mt-3">
-Download the latest beta version of the game.
-</p>
-
-<a href="downloads/Sean Journey.zip" class="cmn-btn style--two mt-5" download>
-Download Beta
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer class="footer-section bg_img" data-background="images/elements/footer.png">
-<div class="container">
-<div class="row footer-bottom align-items-center">
-
-<div class="col-lg-7 col-md-6 text-md-left text-center">
-<p class="copy-right-text">
-Copyright © 2026 Sean Journey
-</p>
-</div>
-
-</div>
-</div>
-</footer>
-
-</div>
-
 
 <script src="js/458-js-vhM5nTkRwGeE.js"></script>
 <script src="js/3414-js-tIITz0JOA8AU.js"></script>
@@ -101,6 +389,5 @@ Copyright © 2026 Sean Journey
 <script src="js/2627-js-Fd31pqFTUSxp.js"></script>
 <script src="js/5853-js-1tJf0xvM9SSX.js"></script>
 <script src="js/4143-js-h2c0jlg7K18U.js"></script>
-
 </body>
 </html>
