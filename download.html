@@ -257,8 +257,121 @@
   }
 
 </style>
+
+<style>
+.download-warning-overlay{
+position:fixed;
+inset:0;
+background:rgba(4,8,20,.74);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:9999;
+backdrop-filter:blur(10px);
+padding:20px;
+}
+
+.download-warning{
+background:linear-gradient(180deg, rgba(18,26,48,.96) 0%, rgba(9,14,28,.97) 100%);
+border:1px solid rgba(140,102,255,.35);
+padding:32px 28px;
+border-radius:24px;
+text-align:center;
+max-width:440px;
+width:100%;
+color:#fff;
+box-shadow:
+0 0 0 1px rgba(255,255,255,.04) inset,
+0 22px 70px rgba(0,0,0,.55),
+0 0 36px rgba(124,92,255,.18);
+animation:popup .25s ease;
+}
+
+.download-warning-icon{
+width:70px;
+height:70px;
+margin:0 auto 16px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+background:radial-gradient(circle at 30% 30%, rgba(124,92,255,.42), rgba(62,180,255,.15));
+border:1px solid rgba(124,92,255,.42);
+box-shadow:0 0 24px rgba(124,92,255,.24);
+}
+
+.download-warning h3{
+margin:0 0 10px;
+font-size:25px;
+font-weight:700;
+color:#fff;
+}
+
+.download-warning p{
+margin:0;
+font-size:15px;
+line-height:1.65;
+opacity:.88;
+}
+
+.download-warning-actions{
+margin-top:22px;
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.download-warning-actions .cmn-btn,
+.download-close-btn{
+min-width:190px;
+border:none;
+border-radius:999px;
+padding:14px 22px;
+font-weight:700;
+cursor:pointer;
+transition:.2s ease;
+}
+
+.download-warning-actions .cmn-btn{
+box-shadow:0 10px 28px rgba(124,92,255,.25);
+}
+
+.download-close-btn{
+background:rgba(255,255,255,.06);
+color:#fff;
+border:1px solid rgba(255,255,255,.12);
+box-shadow:0 8px 22px rgba(0,0,0,.18);
+}
+
+.download-close-btn:hover{
+transform:translateY(-1px);
+background:rgba(255,255,255,.10);
+}
+
+@keyframes popup{
+from{transform:translateY(10px) scale(.95);opacity:0}
+to{transform:translateY(0) scale(1);opacity:1}
+}
+</style>
+
 </head>
 <body>
+
+<div class="download-warning-overlay" id="downloadWarning">
+  <div class="download-warning">
+    <div class="download-warning-icon">⚠</div>
+    <h3>Download Notice</h3>
+    <p>If the main file doesn’t work, use the alternative download below.</p>
+    <div class="download-warning-actions">
+      <a href="downloads/Sean Journey Alternative.zip" class="cmn-btn style--two" id="alternativeDownloadBtn">Alternative Download</a>
+      <button type="button" class="download-close-btn" id="downloadCloseBtn">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
 <div class="preloader">
   <div class="spinner">
     <div class="dot1"></div>
@@ -313,7 +426,7 @@
             </div>
 
             <div class="hero-actions">
-              <a href="downloads/Sean Journey.zip" class="cmn-btn style--two" download>Download Beta</a>
+              <a href="downloads/Sean Journey.zip" class="cmn-btn style--two" download id="downloadBetaBtn">Download Beta</a>
               <a href="https://gofile.io/d/lYinyR" class="cmn-btn style--two alt-download-btn" download>Alternative Download</a>
               <a href="#details" class="alt-btn">View Details</a>
             </div>
@@ -400,5 +513,99 @@
 <script src="js/2627-js-Fd31pqFTUSxp.js"></script>
 <script src="js/5853-js-1tJf0xvM9SSX.js"></script>
 <script src="js/4143-js-h2c0jlg7K18U.js"></script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("downloadBetaBtn");
+  const warn = document.getElementById("downloadWarning");
+  const closeBtn = document.getElementById("downloadCloseBtn");
+  const altBtn = document.getElementById("alternativeDownloadBtn");
+
+  if (btn && warn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      warn.style.display = "flex";
+
+      setTimeout(function () {
+        window.location.href = btn.getAttribute("href");
+      }, 1200);
+
+      setTimeout(function () {
+        warn.style.display = "none";
+      }, 3200);
+    });
+  }
+
+  if (closeBtn && warn) {
+    closeBtn.addEventListener("click", function () {
+      warn.style.display = "none";
+    });
+  }
+
+  if (warn) {
+    warn.addEventListener("click", function (e) {
+      if (e.target === warn) {
+        warn.style.display = "none";
+      }
+    });
+  }
+
+  if (altBtn && warn) {
+    altBtn.addEventListener("click", function () {
+      warn.style.display = "none";
+    });
+  }
+});
+</script>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("downloadBetaBtn");
+  const warn = document.getElementById("downloadWarning");
+  const closeBtn = document.getElementById("downloadCloseBtn");
+  const altBtn = document.getElementById("alternativeDownloadBtn");
+
+  if (btn && warn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      warn.style.display = "flex";
+
+      setTimeout(function () {
+        window.location.href = btn.getAttribute("href");
+      }, 1200);
+
+      setTimeout(function () {
+        warn.style.display = "none";
+      }, 3200);
+    });
+  }
+
+  if (closeBtn && warn) {
+    closeBtn.addEventListener("click", function () {
+      warn.style.display = "none";
+    });
+  }
+
+  if (warn) {
+    warn.addEventListener("click", function (e) {
+      if (e.target === warn) {
+        warn.style.display = "none";
+      }
+    });
+  }
+
+  if (altBtn && warn) {
+    altBtn.addEventListener("click", function () {
+      warn.style.display = "none";
+    });
+  }
+});
+</script>
+
+
 </body>
 </html>
